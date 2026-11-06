@@ -1,0 +1,86 @@
+
+========================================
+     BOOK READING CHALLENGE TRACKER
+========================================
+1. Add reading record
+2. View all reading records
+3. Search record by Entry ID
+4. View challenge summary
+5. Exit
+Enter your choice: 
+--- Add Reading Record ---
+Entry ID: Reader name: Book title: Author name: Challenge name: Total pages in book (1-10000): Pages read so far (0-total pages): Reading record added successfully.
+
+========================================
+     BOOK READING CHALLENGE TRACKER
+========================================
+1. Add reading record
+2. View all reading records
+3. Search record by Entry ID
+4. View challenge summary
+5. Exit
+Enter your choice: 
+--- All Reading Records ---
+
+----------------------------------------
+Entry ID       : B001
+Reader         : Yashodip
+Book Title     : Atomic Habits
+Author         : James Clear
+Challenge      : January Reading Challenge
+Pages Read     : 80 / 320
+Progress       : 25%
+Reading Status : In Progress
+----------------------------------------
+
+========================================
+     BOOK READING CHALLENGE TRACKER
+========================================
+1. Add reading record
+2. View all reading records
+3. Search record by Entry ID
+4. View challenge summary
+5. Exit
+Enter your choice: 
+--- Search Reading Record ---
+Enter entry ID: 
+----------------------------------------
+Entry ID       : B001
+Reader         : Yashodip
+Book Title     : Atomic Habits
+Author         : James Clear
+Challenge      : January Reading Challenge
+Pages Read     : 80 / 320
+Progress       : 25%
+Reading Status : In Progress
+----------------------------------------
+
+========================================
+     BOOK READING CHALLENGE TRACKER
+========================================
+1. Add reading record
+2. View all reading records
+3. Search record by Entry ID
+4. View challenge summary
+5. Exit
+Enter your choice: 
+--- Reading Challenge Summary ---
+Total reading records : 1
+Completed books       : 0
+In-progress books     : 1
+Not-started books     : 0
+Pages read            : 80
+Total book pages      : 320
+Objects initialised   : 1
+
+========================================
+     BOOK READING CHALLENGE TRACKER
+========================================
+1. Add reading record
+2. View all reading records
+3. Search record by Entry ID
+4. View challenge summary
+5. Exit
+Enter your choice: Thank you for using Book Reading Challenge Tracker.
+
+STDERR:

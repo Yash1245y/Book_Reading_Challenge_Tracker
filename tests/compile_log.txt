@@ -1,0 +1,5 @@
+COMMAND: g++ -std=c++11 -Wall -Wextra -pedantic /mnt/data/Book_Reading_Challenge_Tracker_CA1_v2/src/main.cpp -o /mnt/data/Book_Reading_Challenge_Tracker_CA1_v2/tests/book_tracker
+RETURN CODE: 0
+STDOUT:
+
+STDERR:
