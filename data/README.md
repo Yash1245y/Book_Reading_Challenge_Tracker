@@ -1,3 +1,1 @@
-# Data directory
-
-Reserved for sample and persistent data files in later phases. CA1 uses an in-memory array only and does not create a data file.
+Runtime binary records are stored here as reading_entries.dat. Run the application from the project root. Do not edit the binary file in a text editor.

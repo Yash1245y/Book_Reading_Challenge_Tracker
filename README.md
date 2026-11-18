@@ -1,49 +1,47 @@
-# Book Reading Challenge Tracker — CA1
+# Book Reading Challenge Tracker
 
-**Course:** CAP455 — Object-Oriented Programming using C++  
-**Programme / Session:** MCA | Academic Session 2026–27  
-**Student:** Yashodip Prabhakar Deore  
-**Reg/Roll Number:** 12620514 / [42]  
-**Faculty / Project Guide:** Prof. Adarsh Singh  
-**Institution:** LPU, Computer Application
+A menu-driven C++ console application for tracking reading progress in named challenges.
 
-## Purpose
-A menu-driven C++ console application for recording a reader's books within reading challenges, tracking pages read, searching entries, and viewing a basic progress summary.
-
-## CA1 features
-- Add a reading record with a unique Entry ID.
-- View all records and search by Entry ID.
-- Validate required text, page counts, and duplicate IDs.
+## CA2 features
+- Create and display reading records.
+- Search persistent records by Entry ID using `seekg()`.
+- Update pages-read progress using `seekp()`.
+- Store fixed-size binary records in `data/reading_entries.dat`.
+- Preserve records after closing and restarting the application.
+- Validate required text, unique IDs, page ranges, and fixed storage capacities.
 - Calculate progress percentage and reading status.
-- Display a summary of completed, in-progress, and not-started records.
-- In-memory fixed array of up to 100 `ReadingEntry` objects.
 
-## C++ concepts demonstrated
-Class and objects, encapsulation, static data member, inline getters, friend display function, array of objects, object pointers, `this` pointer, and `std::string`.
+## Requirements
+- C++11-compatible compiler (GCC/MinGW recommended).
 
-## Build and run
-From the project root:
+## Build and run (Windows PowerShell)
+Run these commands from the project root:
+
+```powershell
+New-Item -ItemType Directory -Force -Path .\data
+g++ -std=c++11 -Wall -Wextra -pedantic .\src\main.cpp -o .\book_tracker.exe
+.\book_tracker.exe
+```
+
+## Build and run (Linux/macOS)
+Run from the project root:
 
 ```bash
+mkdir -p data
 g++ -std=c++11 -Wall -Wextra -pedantic src/main.cpp -o book_tracker
 ./book_tracker
 ```
 
-On Windows with MinGW:
-
-```powershell
-g++ -std=c++11 -Wall -Wextra -pedantic src/main.cpp -o book_tracker.exe
-.ook_tracker.exe
-```
+The working directory must be the project root because the runtime path is `data/reading_entries.dat`.
 
 ## Repository structure
-- `docs/` — proposal, data dictionary, UML, flowchart, checklist
-- `src/` — C++ source code
-- `data/` — reserved for later persistent data files
-- `tests/` — test cases and sample run evidence
+- `src/main.cpp` — application source.
+- `data/` — runtime binary file (created/used by the application).
+- `docs/` — proposal, report, diagrams and documentation.
+- `tests/` — test plan and verification record.
 
-## CA1 storage limitation
-Records exist only while the program is running. File persistence, update/delete, inheritance, operator overloading, dynamic allocation, exceptions, templates, STL algorithms, and backup/export are planned for later CAs as appropriate to the supplied course guide.
+## Storage note
+The program stores `ReadingEntryRecord` fixed-size structures, not raw `ReadingEntry` objects. The application class contains `std::string`, whose internal representation must not be written directly as raw binary bytes. The binary structure is intended for compatible builds of this project and is not a portable database format.
 
-## Important scope note
-CA1 records the reader, book, author, challenge, total pages, and pages read. It does not yet provide accounts, dates/deadlines, leaderboards, multi-user networking, or permanent storage. Confirm any additional faculty-specific scenario requirements before submission.
+## Current scope
+This phase supports adding, viewing, searching, and updating pages-read progress. Record deletion, full metadata editing, database connectivity, multi-user access, reminders, leaderboards, and network collaboration are not included.
